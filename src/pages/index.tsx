@@ -23,7 +23,7 @@ type GetImagesResponse = {
 
 export default function Home(): JSX.Element {
   const getImages = async ({ pageParam = null }): Promise<GetImagesResponse> => {
-    const { data } = await api.get('/images', {
+    const { data } = await api.get('/api/images', {
       params: {
         after: pageParam,
       }
